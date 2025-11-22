@@ -27,8 +27,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* start webpushr code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BBTOQOm-mxNj818HS68Ev_hNDvmpHnVytGRYa6XiauwbBxdVu5KJ5iiVQT4ndO-rYCVwMwrJas-U8CFIN-5kVzE' });`,
+          }}
+        />
+        {/* end webpushr code */}
         {children}
       </body>
+      
     </html>
   );
 }
